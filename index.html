@@ -3,99 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO CHECKLIST
-         - Title tag includes main keywords
-         - Meta description is concise and under 160 characters
-         - Open Graph and Twitter tags for social sharing
-         - Header tags (h1, h2, h3) used for structure
-         - Alt text for images (add if you use <img> tags)
-         - Internal links to other pages or sections
-         - JSON-LD schema markup for product
-         - Mobile friendly and fast loading
-         - Use canonical URL if duplicate content
-    -->
-    <meta name="description" content="Create your professional autobiography website and printable book. No coding required. Beautiful, private, and easy to use.">
-    <!-- Product Schema Markup for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Digital Autobiography Template",
-      "image": "https://www.autobiography.live/icon.png",
-      "description": "Create your professional autobiography website and printable book. No coding required. Beautiful, private, and easy to use.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Autobiography.live"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://payhip.com/b/NdZ7o",
-        "priceCurrency": "USD",
-        "price": "29.00",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
+    <meta name="description" content="The Digital Autobiography Template - Turn your memories into beautiful websites. Create professional autobiography websites with no coding required.">
     <meta name="keywords" content="autobiography template, digital memoir, family history website, life story, personal website template">
     <meta name="author" content="Digital Autobiography Template">
-    <title>The Digital Autobiography Template - Turn Your Memories Into Beautiful Websites & Books</title>
-
+    <title>The Digital Autobiography Template - Turn Your Memories Into Beautiful Websites</title>
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.autobiography.live/">
+    <meta property="og:url" content="https://pmnoos.github.io/autobiography-landing/">
     <meta property="og:title" content="The Digital Autobiography Template">
-    <meta property="og:description" content="Turn Your Memories Into Beautiful Websites & Books. Create professional autobiography websites with no coding required.">
-
+    <meta property="og:description" content="Turn your memories into beautiful websites. Create professional autobiography websites with no coding required.">
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.autobiography.live/">
+    <meta property="twitter:url" content="https://pmnoos.github.io/autobiography-landing/">
     <meta property="twitter:title" content="The Digital Autobiography Template">
-    <meta property="twitter:description" content="Turn Your Memories Into Beautiful Websites & Books. Create professional autobiography websites with no coding required.">
-
+    <meta property="twitter:description" content="Turn your memories into beautiful websites. Create professional autobiography websites with no coding required.">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Custom CSS for animations and additional styling -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
+        
         body {
             font-family: 'Inter', sans-serif;
         }
-
+        
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
+        
         .hero-pattern {
             background-image: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                               radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                               radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%);
         }
-
+        
         .feature-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
+        
         .btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: all 0.3s ease;
         }
-
+        
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
         }
-
+        
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-
+        
         @keyframes floating {
             0% { transform: translate(0, 0px); }
             50% { transform: translate(0, -10px); }
@@ -117,8 +85,8 @@
                     <a href="#features" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Features</a>
                     <a href="#demo" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Demo</a>
                     <a href="#download" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Download</a>
-                    <a href="https://payhip.com/b/NdZ7o" target="_blank" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
-                      buy now
+                    <a href="https://github.com/pmnoos/autobiograpthy_template" target="_blank" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
+                        Get Template
                     </a>
                 </div>
             </div>
@@ -135,19 +103,21 @@
                             The Digital Autobiography Template
                         </h1>
                         <p class="mt-6 text-xl text-purple-100 sm:text-2xl">
-                            Turn Your Memories Into Beautiful Websites & Books
+                            Turn Your Memories Into Beautiful Websites
                         </p>
                         <p class="mt-4 text-lg text-purple-100">
-                            Create professional autobiography websites AND generate PDF books to preserve your life stories for future generations. No coding experience required.
+                            Create a professional autobiography website to preserve your life stories for future generations. No coding experience required.
                         </p>
-
-                        <div class="mt-6 text-purple-100 text-sm">
-                            ✅ A Complete Template  &nbsp;&nbsp; ✅ No Coding Required &nbsp;&nbsp; ✅ Professional Design
-                        </div>
-                        <div class="mt-8">
-                            <a href="https://payhip.com/b/NdZ7o" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:scale-105 transition-transform inline-block">
-                                Buy Now
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                            <a href="https://github.com/pmnoos/autobiograpthy_template" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold text-center">
+                                📥 Download Free Template
                             </a>
+                            <a href="#demo" class="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold text-center hover:bg-gray-50 transition-colors">
+                                👀 See Live Demo
+                            </a>
+                        </div>
+                        <div class="mt-6 text-purple-100 text-sm">
+                            ✅ Completely Free &nbsp;&nbsp; ✅ No Coding Required &nbsp;&nbsp; ✅ Professional Design
                         </div>
                     </div>
                 </div>
@@ -196,7 +166,7 @@
                 </p>
             </div>
 
-            <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 <!-- Feature 1 -->
                 <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
@@ -263,24 +233,37 @@
                     </p>
                 </div>
 
-                <!-- Feature 7 - PDF Export -->
                 <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">📄</span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">PDF Export</h3>
                     <p class="text-gray-600">
-                        Generate beautiful PDF versions of your autobiography. Perfect for printing books or sharing offline.
+                        Export your complete autobiography or individual chapters as beautiful PDF books for printing and sharing.
                     </p>
+                    
                 </div>
-                 <!-- Feature 8 - Gifting -->
+                <!-- Feature 8 - Gifting -->
                 <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">📄</span>
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🎁</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">PDF Export</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Gifting Idea</h3>
                     <p class="text-gray-600">
                         Why not offer it to a senior relative — your grandparents, aunt, uncle, or someone you admire — and help write their story? It’s a thoughtful gift and a beautiful way to preserve their legacy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+                <!-- Feature 9 - Image Support -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🖼️</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Rich Media Support</h3>
+                    <p class="text-gray-600">
+                        Add photos, images, and rich text formatting to bring your stories to life with visual elements.
                     </p>
                 </div>
             </div>
@@ -314,7 +297,7 @@
                         <h1 class="text-4xl font-bold text-gray-900 mb-2">Mary Johnson's Life Story</h1>
                         <p class="text-xl text-gray-600">A journey through 75 years of love, adventure, and wisdom</p>
                     </div>
-
+                    
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <h3 class="font-semibold text-gray-900 mb-2">Chapter 1: Childhood Dreams</h3>
@@ -333,48 +316,12 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-8 text-center">
-                    <a href="https://github.com/pmnoos/autobiography-template-readme/blob/main/getting-started.md" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold mr-4">
-                        Create Your Own Like This
-                    </a>
-                    <a href="https://payhip.com/b/NdZ7o" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold">
-                        Buy Now
-                    </a>
-                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- PDF Features Section -->
-    <section class="py-16 bg-purple-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">📄 Professional PDF Export</h2>
-                <p class="mt-4 text-xl text-gray-600">Transform your digital autobiography into beautiful, printable books</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-2xl">📖</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Complete Books</h3>
-                    <p class="text-gray-600">Export your entire autobiography as a professionally formatted PDF book</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-2xl">📄</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Individual Chapters</h3>
-                    <p class="text-gray-600">Generate PDFs for specific chapters to share individual stories</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-2xl">🖨️</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Print Ready</h3>
-                    <p class="text-gray-600">Optimized layouts perfect for home printing or professional book binding</p>
-                </div>
+            <div class="mt-8 text-center">
+                <a href="https://github.com/pmnoos/autobiograpthy_template" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                    Create Your Own Like This
+                </a>
             </div>
         </div>
     </section>
@@ -437,7 +384,7 @@
             <p class="mt-4 text-xl text-purple-100">
                 Download the complete template with documentation, setup scripts, and everything you need to get started.
             </p>
-
+            
             <div class="mt-8 bg-white rounded-lg p-8 shadow-xl">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-4">What's Included:</h3>
                 <div class="grid md:grid-cols-2 gap-4 text-left">
@@ -459,73 +406,72 @@
                     </div>
                     <div class="flex items-center space-x-3">
                         <span class="text-green-500 text-xl">✅</span>
-                        <span class="text-gray-700">PDF export functionality</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-green-500 text-xl">✅</span>
-                        <span class="text-gray-700">Sample content and photos</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-green-500 text-xl">✅</span>
                         <span class="text-gray-700">Writing prompts and chapter templates</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <span class="text-green-500 text-xl">✅</span>
                         <span class="text-gray-700">Deployment guides for going live</span>
                     </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500 text-xl">✅</span>
+                        <span class="text-gray-700">📄 PDF export functionality</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500 text-xl">✅</span>
+                        <span class="text-gray-700">🖼️ Photo gallery and image support</span>
+                    </div>
                 </div>
-
-                <div class="mt-8 text-center">
-                    <a href="https://payhip.com/b/NdZ7o" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:scale-105 transition-transform inline-block">
-                        Buy Now
+                
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://github.com/pmnoos/autobiograpthy_template" target="_blank" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                        📥 Download From GitHub
+                    </a>
+                    <a href="https://github.com/pmnoos/autobiograpthy_template/archive/main.zip" class="bg-gray-100 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-200 transition-colors">
+                        💾 Direct Download (ZIP)
                     </a>
                 </div>
-
-
-
-
+                
+                <p class="mt-4 text-gray-600 text-sm">
+                    100% Free • Open Source • No Signup Required
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">📖 Digital Autobiography Template</h3>
-                    <p class="text-gray-400">
-                        Helping families preserve their stories for future generations.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        
-                        <li><a href="https://github.com/pmnoos/autobiography-template-readme/blob/main/getting-started.md" target="_blank" class="hover:text-white">Getting Started Guide</a></li>
-                        <li><a href="https://github.com/pmnoos/autobiography-template-readme/blob/main/customization-guide.md" target="_blank" class="hover:text-white">Customization Guide</a></li>
-                        <li><a href="https://github.com/pmnoos/autobiography-template-readme/blob/main/troubleshooting.md" target="_blank" class="hover:text-white">Troubleshooting</a></li>
-                    </li>
-                        <li><a href="https://github.com/pmnoos/autobiography-template/issues" target="_blank" class="hover:text-white">Support</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">About</h4>
-                    <p class="text-gray-400 text-sm">
-                        This template was built with Ruby on Rails and designed to help families preserve their stories for generations.
-                    </p>
-                </div>
+    <!-- Footer -->
+   <!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">📖 Digital Autobiography Template</h3>
+                <p class="text-gray-400">
+                    Helping families preserve their stories for future generations.
+                </p>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-               <p>&copy; 2025 Autobiography.live - Digital Autobiography Template</p>
-               <div class="mt-4">
-                   <a href="https://payhip.com/b/NdZ7o" target="_blank" class="btn-primary text-white px-6 py-2 rounded-lg text-sm font-medium inline-block">
-                       Buy Now
-                   </a>
-               </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="https://github.com/pmnoos/autobiograpthy_template" target="_blank" class="hover:text-white">GitHub Repository</a></li>
+                    <li><a href="https://github.com/pmnoos/autobiograpthy_template/blob/main/docs/GETTING_STARTED.md" target="_blank" class="hover:text-white">Getting Started Guide</a></li>
+                    <li><a href="https://github.com/pmnoos/autobiograpthy_template/blob/main/docs/FAQ.md" target="_blank" class="hover:text-white">FAQ</a></li>
+                    <li><a href="https://github.com/pmnoos/autobiograpthy_template/issues" target="_blank" class="hover:text-white">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">About</h4>
+                <p class="text-gray-400 text-sm">
+                    This template was built with Ruby on Rails and designed to help families preserve their stories for generations.
+                </p>
             </div>
         </div>
-    </footer>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2025 Digital Autobiography Template. Free for personal use. Commercial use requires a license.</p>
+        </div>
+    </div>
+</footer>
+
 
     <!-- Smooth scrolling script -->
     <script>
@@ -541,6 +487,3 @@
     </script>
 </body>
 </html>
-
-                <div>
-
