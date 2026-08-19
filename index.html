@@ -713,11 +713,9 @@
         });
     </script>
 
-    <!-- Contact form submission -->
+    <!-- Contact form submission via Formspree -->
     <script>
-        // Point this at your deployed FastAPI Cloud contact endpoint, e.g.
-        // https://autobio-contact-xxxxxxxx.fastapicloud.dev/api/contact
-        const CONTACT_ENDPOINT = "https://contact-api.fastapicloud.dev/api/contact";
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzepkqdv";
 
         const form = document.getElementById('contact-form');
         const statusEl = document.getElementById('contact-status');
@@ -739,9 +737,12 @@
             statusEl.textContent = '';
 
             try {
-                const response = await fetch(CONTACT_ENDPOINT, {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
                     body: JSON.stringify({
                         name: form.name.value,
                         email: form.email.value,
