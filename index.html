@@ -13,6 +13,8 @@
     <meta property="og:url" content="https://stories.petermagner.com/">
     <meta property="og:title" content="The Digital Autobiography Template">
     <meta property="og:description" content="Turn your memories into beautiful websites. Create a personal autobiography website, with help available for setup.">
+    <!-- TODO: add an og:image once you have a share picture, e.g.
+    <meta property="og:image" content="https://stories.petermagner.com/share.jpg"> -->
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -20,16 +22,27 @@
     <meta property="twitter:title" content="The Digital Autobiography Template">
     <meta property="twitter:description" content="Turn your memories into beautiful websites. Create a personal autobiography website, with help available for setup.">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Compiled Tailwind CSS (built once from this page) -->
+    <link rel="stylesheet" href="styles.css">
     
     <!-- Custom CSS for animations and additional styling -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        /* Slightly larger base size for easier reading */
+        html {
+            font-size: 18px;
+        }
         
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* Darker greys for better contrast */
+        .text-gray-600 { color: #374151 !important; }
+        .text-gray-500 { color: #4b5563 !important; }
+        .text-gray-400 { color: #d1d5db !important; }
+        .text-purple-100 { color: #f3e8ff !important; }
         
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -53,6 +66,7 @@
         .btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .btn-primary:hover {
@@ -65,6 +79,7 @@
             border: 2px solid #764ba2;
             color: #764ba2;
             transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
@@ -80,6 +95,14 @@
             0% { transform: translate(0, 0px); }
             50% { transform: translate(0, -10px); }
             100% { transform: translate(0, 0px); }
+        }
+
+        /* Respect people who prefer no motion */
+        @media (prefers-reduced-motion: reduce) {
+            .floating { animation: none; }
+            .feature-card, .btn-primary, .btn-secondary, details summary .faq-icon { transition: none; }
+            .feature-card:hover, .btn-primary:hover, .btn-secondary:hover { transform: none; }
+            html { scroll-behavior: auto; }
         }
 
         details summary {
@@ -113,7 +136,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold text-gray-800">📖 Digital Autobiography</h1>
+                        <p class="text-xl font-bold text-gray-800">📖 Digital Autobiography</p>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -125,7 +148,24 @@
                         Get Personal Help
                     </a>
                 </div>
+                <!-- Mobile: help button + menu button -->
+                <div class="flex md:hidden items-center space-x-2">
+                    <a href="#contact" class="btn-primary text-white px-3 py-2 rounded-lg text-sm font-medium">Get Help</a>
+                    <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                        class="p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+            <a href="#features" class="block py-3 text-gray-800 text-lg font-medium">Features</a>
+            <a href="#demo" class="block py-3 text-gray-800 text-lg font-medium">Demo</a>
+            <a href="#pricing" class="block py-3 text-gray-800 text-lg font-medium">Pricing</a>
+            <a href="#download" class="block py-3 text-gray-800 text-lg font-medium">Free Template</a>
+            <a href="#contact" class="block py-3 text-purple-700 text-lg font-semibold">Contact Peter</a>
         </div>
     </nav>
 
@@ -153,6 +193,9 @@
                             </a>
                         </div>
                         <p class="mt-5 text-purple-100 text-base">
+                            Want to see the real thing? <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="underline font-semibold text-white hover:text-purple-200">Visit Peter's own autobiography website</a>.
+                        </p>
+                        <p class="mt-3 text-purple-100 text-base">
                             Prefer to do it yourself? A free template is also available for people comfortable setting up their own website.
                         </p>
                     </div>
@@ -263,9 +306,9 @@
                     <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">⚡</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Fast & Reliable</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Quick and Dependable</h3>
                     <p class="text-gray-600">
-                        Built on Ruby on Rails with modern web standards for fast, reliable performance.
+                        Your pages open quickly and stay online, so your family can visit whenever they like.
                     </p>
                 </div>
             </div>
@@ -296,7 +339,7 @@
                         <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                             <span class="text-white text-3xl">👤</span>
                         </div>
-                        <h1 class="text-4xl font-bold text-gray-900 mb-2">Margaret Thompson's Life Story</h1>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-2">Margaret Thompson's Life Story</h2>
                         <p class="text-xl text-gray-600">A journey through 75 years of love, adventure, and wisdom</p>
                     </div>
                     
@@ -304,25 +347,30 @@
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <h3 class="font-semibold text-gray-900 mb-2">Chapter 1: Childhood Dreams</h3>
                             <p class="text-gray-600 text-sm mb-3">Growing up in a country town taught me the value of community...</p>
-                            <a href="#" class="text-purple-600 text-sm font-medium">Read Chapter →</a>
+                            <span class="text-purple-700 text-sm font-medium">Read Chapter →</span>
                         </div>
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <h3 class="font-semibold text-gray-900 mb-2">Chapter 2: Young Love</h3>
                             <p class="text-gray-600 text-sm mb-3">Meeting your grandfather at the Saturday night dance changed everything...</p>
-                            <a href="#" class="text-purple-600 text-sm font-medium">Read Chapter →</a>
+                            <span class="text-purple-700 text-sm font-medium">Read Chapter →</span>
                         </div>
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <h3 class="font-semibold text-gray-900 mb-2">Chapter 3: Building Our Family</h3>
                             <p class="text-gray-600 text-sm mb-3">The joy and challenges of raising five children...</p>
-                            <a href="#" class="text-purple-600 text-sm font-medium">Read Chapter →</a>
+                            <span class="text-purple-700 text-sm font-medium">Read Chapter →</span>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <p class="mt-4 text-center text-gray-600 text-base">
+                This is an illustration. To explore a real, working site, visit
+                <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline font-medium hover:text-purple-900">Peter's own autobiography</a>.
+            </p>
+
             <div class="mt-8 text-center">
-                <a href="https://github.com/pmnoos/autobiography_template" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold">
-                    Create Your Own Like This
+                <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                    Ask Peter to Set One Up for You
                 </a>
             </div>
         </div>
@@ -336,7 +384,7 @@
                     Perfect For Everyone
                 </h2>
                 <p class="mt-4 text-xl text-gray-600">
-                    Whether you're tech-savvy or not, this template works for you
+                    Whether you're comfortable with computers or not, there's a way for you to get started
                 </p>
             </div>
 
@@ -395,7 +443,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mb-3">Let Peter help you</h3>
                     <p class="text-gray-600">
                         You do not need to install software, create technical accounts or work through complicated instructions.
-                        Peter can help set up your autobiography website. You concentrate on sharing your memories and stories.
+                        I can help set up your autobiography website. You concentrate on sharing your memories and stories.
                     </p>
                     <a href="#contact" class="inline-block mt-6 btn-primary text-white px-6 py-3 rounded-lg font-semibold">
                         Ask Peter for help
@@ -428,16 +476,16 @@
                     Pricing — Your Story, At Your Own Pace
                 </h2>
                 <p class="mt-4 text-xl text-gray-600">
-                    Simple, transparent pricing for our done-for-you service
+                    Simple, transparent pricing for my done-for-you service
                 </p>
             </div>
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
                 <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Setup</h3>
-                    <p class="text-4xl font-bold text-purple-600 mb-4">$175 <span class="text-base font-normal text-gray-500">AUD, one-off</span></p>
+                    <p class="text-4xl font-bold text-purple-700 mb-4">$175 <span class="text-base font-normal text-gray-500">AUD, one-off</span></p>
                     <p class="text-gray-600">
-                        We handle all the technical bits — getting your own private site online, connecting
+                        I handle all the technical bits — getting your own private site online, connecting
                         secure photo storage, and setting up your contact page. No accounts to figure out, no
                         passwords to lose track of, no tech headaches. Just a finished, working site with your
                         name on it.
@@ -446,10 +494,10 @@
 
                 <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Writing</h3>
-                    <p class="text-4xl font-bold text-purple-600 mb-4">$15 <span class="text-base font-normal text-gray-500">AUD per chapter</span></p>
+                    <p class="text-4xl font-bold text-purple-700 mb-4">$15 <span class="text-base font-normal text-gray-500">AUD per chapter</span></p>
                     <p class="text-gray-600">
-                        Send us a few sentences about a memory, an event, a person who mattered — whatever
-                        you'd like to write about next. We'll turn it into a polished chapter on your site.
+                        Send me a few sentences about a memory, an event, a person who mattered — whatever
+                        you'd like to write about next. I'll turn it into a polished chapter on your site.
                         Billed in small batches as you go, so there's never a big bill waiting at the end.
                     </p>
                 </div>
@@ -459,24 +507,37 @@
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Go at your own pace.</h3>
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     There's no deadline here. Some people finish their story in a few months. Others take a
-                    year or more, working through memories a little at a time. Whatever your pace, we're here
+                    year or more, working through memories a little at a time. Whatever your pace, I'm here
                     whenever you're ready for the next chapter.
                 </p>
             </div>
 
-            <p class="mt-8 text-center text-gray-500 text-sm max-w-2xl mx-auto">
+            <p class="mt-8 text-center text-gray-600 text-base max-w-2xl mx-auto">
                 A typical 20–30 chapter autobiography: setup + $300–$450 in chapters = around $475–$625
-                (AUD), plus ongoing website hosting. Hosting is a separate monthly cost.
+                (AUD), plus ongoing website hosting (see below).
             </p>
 
-            <p class="mt-4 text-center text-gray-500 text-sm">
+            <!-- Hosting cost: made prominent so it is not a surprise -->
+            <div class="mt-8 max-w-3xl mx-auto bg-yellow-50 border-2 border-yellow-300 rounded-xl p-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">🌐 About website hosting (a separate monthly cost)</h3>
+                <p class="text-lg text-gray-700">
+                    Hosting keeps your website online so family and friends can visit it. It is not included in the
+                    $175 setup fee or the chapter price. It works a bit like a monthly phone or internet bill.
+                </p>
+                <p class="mt-4 text-lg text-gray-700">
+                    For example, <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline font-medium hover:text-purple-900">Peter's own autobiography</a>
+                    is hosted with <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline font-medium hover:text-purple-900">Render.com</a>,
+                    which currently costs Peter <strong>about $25 per month</strong>. Your cost may be different,
+                    depending on the service and what your site needs.
+                </p>
+                <p class="mt-4 text-lg text-gray-700">
+                    I'll explain the likely cost and get your agreement before arranging anything.
+                </p>
+            </div>
+
+            <p class="mt-6 text-center text-gray-600 text-base max-w-2xl mx-auto">
                 Optional extras — photo galleries, audio narration, and other personal touches — can be added
-                any time, priced individually once you know what you'd like. Website hosting is an ongoing cost,
-                separate from the one-off setup fee and chapter writing. You can see what is possible by visiting
-                <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Peter's own autobiography</a>.
-                It is hosted with <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Render.com</a>,
-                which currently costs Peter about $25 per month. Your hosting cost may be different, depending on
-                the service and requirements. We'll explain the price and get your agreement before arranging anything.
+                any time, priced individually once you know what you'd like.
             </p>
         </div>
     </section>
@@ -497,7 +558,7 @@
                         <span class="faq-icon text-purple-600 text-2xl leading-none">+</span>
                     </summary>
                     <p class="mt-3 text-gray-600">
-                        Yes. Choose the personal-help option and Peter can take care of the technical setup with you.
+                        Yes. Choose the personal-help option and I'll take care of the technical setup with you.
                         You can concentrate on your memories and stories. The free download is intended for
                         people who are comfortable following software and website setup instructions.
                     </p>
@@ -522,7 +583,7 @@
                     </summary>
                     <p class="mt-3 text-gray-600">
                         That's really up to you. Some people write a chapter every week; others take a few
-                        months between chapters while memories come back to them. We never rush you — take
+                        months between chapters while memories come back to them. I never rush you — take
                         all the time you need.
                     </p>
                 </details>
@@ -534,8 +595,8 @@
                     </summary>
                     <p class="mt-3 text-gray-600">
                         Just a few sentences about a memory, event, or person — as much or as little detail as
-                        you're comfortable with. We'll ask a few gentle follow-up questions if we need more,
-                        and turn what you give us into a written chapter.
+                        you're comfortable with. I'll ask a few gentle follow-up questions if I need more,
+                        and turn what you give me into a written chapter.
                     </p>
                 </details>
 
@@ -545,7 +606,9 @@
                         <span class="faq-icon text-purple-600 text-2xl leading-none">+</span>
                     </summary>
                     <p class="mt-3 text-gray-600">
-                        It is your story and your content. The website address and hosting arrangements will be discussed with you as part of setup.
+                        You do. Your stories, photos and everything you write belong to you, and you can ask for a
+                        copy of your content or have the site moved to another host whenever you wish. The website
+                        address and hosting arrangements will be discussed with you as part of setup.
                     </p>
                 </details>
 
@@ -566,7 +629,7 @@
                         <span class="faq-icon text-purple-600 text-2xl leading-none">+</span>
                     </summary>
                     <p class="mt-3 text-gray-600">
-                        Hosting is simply the service that keeps your autobiography website on the internet, so family and friends can visit it using its web address. It is an ongoing cost, a bit like a monthly phone or internet bill, and is not included in the $175 setup fee. You can see a real example by visiting <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Peter's own autobiography</a>. It is hosted with <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Render.com</a>, which currently costs Peter about $25 per month. The cost for your website may be different, depending on the hosting service and what your site needs. Peter will explain the likely cost and get your agreement before anything is arranged. You won't have to sort out the technical details yourself.
+                        Hosting is simply the service that keeps your autobiography website on the internet, so family and friends can visit it using its web address. It is an ongoing cost, a bit like a monthly phone or internet bill, and is not included in the $175 setup fee. You can see a real example by visiting <a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Peter's own autobiography</a>. It is hosted with <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Render.com</a>, which currently costs Peter about $25 per month. The cost for your website may be different, depending on the hosting service and what your site needs. I'll explain the likely cost and get your agreement before anything is arranged. You won't have to sort out the technical details yourself.
                     </p>
                 </details>
 
@@ -576,7 +639,7 @@
                         <span class="faq-icon text-purple-600 text-2xl leading-none">+</span>
                     </summary>
                     <p class="mt-3 text-gray-600">
-                        Just get in touch. We're happy to help at any stage — that's part of the service, not
+                        Just get in touch. I'm happy to help at any stage — that's part of the service, not
                         something you'll be charged extra for.
                     </p>
                 </details>
@@ -597,7 +660,7 @@
             
             <div class="mt-8 bg-white rounded-lg p-8 shadow-xl">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-2">Free template for confident computer users</h3>
-                <p class="text-gray-600 mb-6">This download is a software project, not a ready-made website. You will need to follow the technical setup instructions and arrange hosting to publish your site. If that sounds difficult, please use the personal-help option instead — we're happy to talk it through.</p>
+                <p class="text-gray-600 mb-6">This download is a software project, not a ready-made website. You will need to follow the technical setup instructions and arrange hosting to publish your site. If that sounds difficult, please use the personal-help option instead — I'm happy to talk it through.</p>
                 <h3 class="text-xl font-semibold text-gray-900 mb-4">The download includes:</h3>
                 <div class="grid md:grid-cols-2 gap-4 text-left">
                     <div class="flex items-center space-x-3">
@@ -627,7 +690,7 @@
                 </div>
                 
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://github.com/pmnoos/autobiography_template" target="_blank" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                    <a href="https://github.com/pmnoos/autobiography_template" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold">
                         📥 Download From GitHub
                     </a>
                     <a href="https://github.com/pmnoos/autobiography_template/archive/refs/heads/main.zip" class="bg-gray-100 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-200 transition-colors">
@@ -662,19 +725,19 @@
 
             <form id="contact-form" class="mt-12 bg-white rounded-xl shadow-lg border border-gray-100 p-8 space-y-6">
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your name</label>
+                    <label for="name" class="block text-base font-medium text-gray-700 mb-1">Your name</label>
                     <input type="text" id="name" name="name" required
                         class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your email</label>
+                    <label for="email" class="block text-base font-medium text-gray-700 mb-1">Your email</label>
                     <input type="email" id="email" name="email" required
                         class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                 </div>
 
                 <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can Peter help you?</label>
+                    <label for="message" class="block text-base font-medium text-gray-700 mb-1">How can Peter help you?</label>
                     <textarea id="message" name="message" rows="5" required
                         class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="For example: I'd like to preserve my life story, but I'm not confident with computers."></textarea>
@@ -690,7 +753,7 @@
                     Send Message
                 </button>
 
-                <p id="contact-status" class="text-center text-sm mt-4"></p>
+                <p id="contact-status" class="text-center text-base mt-4" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
@@ -708,17 +771,19 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://github.com/pmnoos/autobiography_template" target="_blank" class="hover:text-white">GitHub Repository</a></li>
-                        <li><a href="https://github.com/pmnoos/autobiography_template/blob/main/docs/GETTING_STARTED.md" target="_blank" class="hover:text-white">Getting Started Guide</a></li>
-                        <li><a href="https://github.com/pmnoos/autobiography_template/blob/main/docs/FAQ.md" target="_blank" class="hover:text-white">FAQ</a></li>
-                        <li><a href="https://github.com/pmnoos/autobiography_template/issues" target="_blank" class="hover:text-white">Support</a></li>
-                        <li><a href="https://petermagner.com/" class="hover:text-white">See a real example</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact Peter for help</a></li>
+                        <li><a href="https://autobio-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white">See a real example</a></li>
+                        <li><a href="https://github.com/pmnoos/autobiography_template" target="_blank" rel="noopener noreferrer" class="hover:text-white">Free template (GitHub)</a></li>
+                        <li><a href="https://github.com/pmnoos/autobiography_template/blob/main/docs/GETTING_STARTED.md" target="_blank" rel="noopener noreferrer" class="hover:text-white">Template setup guide</a></li>
+                        <li><a href="https://github.com/pmnoos/autobiography_template/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer" class="hover:text-white">Template FAQ</a></li>
+                        <li><a href="https://github.com/pmnoos/autobiography_template/issues" target="_blank" rel="noopener noreferrer" class="hover:text-white">Report a template problem</a></li>
+                        <li><a href="https://petermagner.com/" class="hover:text-white">petermagner.com</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">About</h4>
                     <p class="text-gray-400 text-sm">
-                        This template is open source and completely free. Built with Ruby on Rails and designed for families who want to preserve their stories.
+                        The template is open source and free. It is designed for families who want to preserve their stories, with personal help available if you would rather not do the technical part.
                     </p>
                 </div>
             </div>
@@ -728,20 +793,39 @@
         </div>
     </footer>
 
-    <!-- Smooth scrolling script -->
+    <!-- Smooth scrolling + mobile menu -->
     <script>
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for in-page anchor links (ignores empty "#" links)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    e.preventDefault();
+                    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+                    // Close the mobile menu after choosing a link
+                    const menu = document.getElementById('mobile-menu');
+                    const toggle = document.getElementById('menu-toggle');
+                    if (menu && !menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         });
+
+        // Mobile menu toggle
+        (function () {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (!toggle || !menu) return;
+            toggle.addEventListener('click', function () {
+                const isHidden = menu.classList.toggle('hidden');
+                toggle.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            });
+        })();
     </script>
 
     <!-- Contact form submission via Formspree -->
@@ -758,7 +842,7 @@
             // Honeypot check - if this hidden field has anything in it, silently drop
             if (form.website.value.trim() !== '') {
                 statusEl.textContent = 'Thanks! We will be in touch soon.';
-                statusEl.className = 'text-center text-sm mt-4 text-green-600';
+                statusEl.className = 'text-center text-base mt-4 text-green-700';
                 form.reset();
                 return;
             }
@@ -785,12 +869,12 @@
                     throw new Error('Request failed');
                 }
 
-                statusEl.textContent = "Thanks! We've received your message and will be in touch soon.";
-                statusEl.className = 'text-center text-sm mt-4 text-green-600';
+                statusEl.textContent = "Thanks! I've received your message and will be in touch soon.";
+                statusEl.className = 'text-center text-base mt-4 text-green-700';
                 form.reset();
             } catch (err) {
                 statusEl.textContent = 'Sorry, something went wrong. Please try again, or email myautobiographypeter@gmail.com.';
-                statusEl.className = 'text-center text-sm mt-4 text-red-600';
+                statusEl.className = 'text-center text-base mt-4 text-red-700';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Send Message';
